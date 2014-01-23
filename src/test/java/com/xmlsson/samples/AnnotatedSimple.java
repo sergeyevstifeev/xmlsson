@@ -1,4 +1,4 @@
-package com.xmlsson;
+package com.xmlsson.samples;
 
 import com.xmlsson.annotations.XmlssonProperty;
 

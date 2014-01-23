@@ -31,7 +31,9 @@ public class ObjectMapper {
                 }
             }
             return instance;
-        } catch (InstantiationException | IllegalAccessException | XPathExpressionException e) {
+        } catch (InstantiationException e) {
+            throw new IllegalArgumentException("Make sure to have a default constructor", e);
+        } catch (IllegalAccessException | XPathExpressionException e) {
             throw new RuntimeException(e);
         }
     }
