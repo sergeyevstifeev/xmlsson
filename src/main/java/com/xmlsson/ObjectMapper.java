@@ -26,6 +26,7 @@ public class ObjectMapper {
                 if (propertyAnnotation != null) {
                     String xPathExpr = propertyAnnotation.value();
                     String result = xPath.evaluate(xPathExpr, new InputSource(new StringReader(xml)));
+                    field.setAccessible(true);
                     field.set(instance, result);
                 }
             }
