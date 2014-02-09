@@ -30,7 +30,7 @@ public class ObjectMapperTest {
         objectMapper.readValue("<foo>baz</foo>", NotAnnotated.class);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = MappingException.class)
     public void testReadValueCrashesOnNoDefaultConstructor() throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.readValue("<foo>baz</foo>", NoDefaultConstructor.class);
