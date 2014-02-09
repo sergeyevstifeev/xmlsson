@@ -4,7 +4,7 @@ import com.xmlsson.annotations.XmlssonProperty;
 
 public class AnnotatedSimple {
 
-    @XmlssonProperty("/foo/text()")
+    @XmlssonProperty("//foo/text()")
     public String foo;
 
 }

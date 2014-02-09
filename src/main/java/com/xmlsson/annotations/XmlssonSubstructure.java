@@ -10,6 +10,8 @@ import java.lang.annotation.Target;
 @XmlssonAnnotation
 public @interface XmlssonSubstructure {
 
-    Class<?> value();
+    String value();
+
+    Class structureClass();
 
 }
