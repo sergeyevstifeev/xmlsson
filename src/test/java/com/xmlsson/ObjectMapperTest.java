@@ -39,4 +39,13 @@ public class ObjectMapperTest {
         assertThat(annotatedWithSubstructure.foobar, equalTo("foobarval"));
         assertThat(annotatedWithSubstructure.substructure.foo, equalTo("1234"));
     }
+
+    @Test
+    public void testMultipleElementsWork() throws Exception {
+        AnnotatedMultipleElements annotatedMultipleElements = new ObjectMapper().readValue(
+                "<foo><bar>a</bar><bar>b</bar></foo>",
+                AnnotatedMultipleElements.class);
+        assertThat(annotatedMultipleElements.foo[0], equalTo("a"));
+        assertThat(annotatedMultipleElements.foo[1], equalTo("b"));
+    }
 }
