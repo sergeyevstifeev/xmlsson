@@ -1,6 +1,6 @@
 # Overview
 
-Convert from XML to Java via annotations with XPath expressions.
+A small experimental tool to convert from XML to Java via annotations with XPath expressions. Doesn't quite work with XML namespaces.
 
 # Usage
 
